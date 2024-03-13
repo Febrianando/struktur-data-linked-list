@@ -1,0 +1,25 @@
+def hitung_total_harga(self):
+        total_harga = 0
+        current = self.head
+        while current:
+            total_harga += current.harga
+            current = current.next
+        return total_harga
+
+# Daftar menu dan harga
+menu_harga = {
+    "mixue ice cream": 5000,
+    "boba shake": 16000,
+    "mi sundae": 14000,
+    "mi ganas": 11000,
+    "creamy manggo boba": 22000
+}
+# Fungsi untuk menampilkan daftar menu
+def tampilkan_daftar_menu():
+    print("Daftar Menu:")
+    for menu, harga in menu_harga.items():
+        print(f"{menu}: {harga} rupiah")
+
+# Fungsi utama
+def main():
+    keranjang_pesanan = LinkedList()
